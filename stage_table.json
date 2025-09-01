@@ -1,0 +1,560 @@
+{
+    "stage 1-1": {
+        "tilemap_b": {
+            "base_offset": "0x0003E238",
+            "offset": "0x0003E24A",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FA892"
+        },
+        "tileset_a": {
+            "base_offset": "0x000D8E32",
+            "offset": "0x000D8E36"
+        },
+        "tileset_b": {
+            "base_offset": "0x000C907E",
+            "offset": "0x000C9082"
+        },
+        "a_palettes": [
+            "0x00042382",
+            "0x00042382"
+        ],
+        "sects": 3,
+        "tilemaps": [
+            "0x4B846",
+            "0x4C084",
+            "0x4C902"
+        ]
+    },
+    "stage 1-2": {
+        "tilemap_b": {
+            "base_offset": "0x0003E5B2",
+            "offset": "0x0003E5C4",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FAC72"
+        },
+        "tileset_a": {
+            "base_offset": "0x000D97C6",
+            "offset": "0x000D97CA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000C9DF2",
+            "offset": "0x000C9DF6"
+        },
+        "a_palettes": [
+            "0x000423A2",
+            "0x000423A2"
+        ],
+        "sects": 3,
+        "tilemaps": [
+            "0x4D076",
+            "0x4DC1A",
+            "0x4E56E"
+        ]
+    },
+    "stage 1-3": {
+        "tilemap_b": {
+            "base_offset": "0x0003E5B2",
+            "offset": "0x0003E5C4",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FAC72"
+        },
+        "tileset_a": {
+            "base_offset": "0x000D97C6",
+            "offset": "0x000D97CA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000C9DF2",
+            "offset": "0x000C9DF6"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4AEF2"
+        ]
+    },
+    "stage 2-1": {
+        "tilemap_b": {
+            "base_offset": "0x0003ECEC",
+            "offset": "0x0003ECFE",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FB192"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DA9DA",
+            "offset": "0x000DA9DE"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CAD36",
+            "offset": "0x000CAD3A"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4EED2"
+        ]
+    },
+    "stage 2-2": {
+        "tilemap_b": {
+            "base_offset": "0x0003ECEC",
+            "offset": "0x0003ECFE",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FB1B8"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DB6EE",
+            "offset": "0x000DB6F2"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CBB5A",
+            "offset": "0x000CBB5E"
+        },
+        "a_palettes": [
+            "0x000421E2",
+            "0x000421E2"
+        ],
+        "sects": 3,
+        "tilemaps": [
+            "0x4EED2",
+            "0x4F826",
+            "0x5030E"
+        ]
+    },
+    "stage 2-3": {
+        "tilemap_b": {
+            "base_offset": "0x0003ECEC",
+            "offset": "0x0003ECFE",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FB1B8"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DB6EE",
+            "offset": "0x000DB6F2"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CBB5A",
+            "offset": "0x000CBB5E"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4B08C"
+        ]
+    },
+    "stage 3-1": {
+        "tilemap_b": {
+            "base_offset": "0x0003ECEC",
+            "offset": "0x0003ECFE",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FBAB8"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DBAA2",
+            "offset": "0x000DBAA6"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CCCEE",
+            "offset": "0x000CCCF2"
+        },
+        "a_palettes": [
+            "0x00042342",
+            "0x00042342"
+        ],
+        "sects": 3,
+        "tilemaps": [
+            "0x51088",
+            "0x51AD0",
+            "0x52FA6"
+        ]
+    },
+    "stage 3-2": {
+        "tilemap_b": {
+            "base_offset": "0x0003EE72",
+            "offset": "0x0003EED8",
+            "counter": 15
+        },
+        "mapper": {
+            "offset": "0x000FBFB0"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DC6E6",
+            "offset": "0x000DC6EA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CDDA2",
+            "offset": "0x000CDDA6"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x53E28"
+        ]
+    },
+    "stage 3-3": {
+        "tilemap_b": {
+            "base_offset": "0x0003EFF2",
+            "offset": "0x0003F1D8",
+            "counter": 79
+        },
+        "mapper": {
+            "offset": "0x000FBFB0"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DC6E6",
+            "offset": "0x000DC6EA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CDDA2",
+            "offset": "0x000CDDA6"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4B32C"
+        ]
+    },
+    "stage 4-1": {
+        "tilemap_b": {
+            "base_offset": "0x0003F1AE",
+            "offset": "0x0003F1C0",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FC308"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DD77A",
+            "offset": "0x000DD77E"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CEA06",
+            "offset": "0x000CEA0A"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x55DBE"
+        ]
+    },
+    "stage 4-2": {
+        "tilemap_b": {
+            "base_offset": "0x0003F2B6",
+            "offset": "0x0003F2C8",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FC32E"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DE1CE",
+            "offset": "0x000DE1D2"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CF52A",
+            "offset": "0x000CF52E"
+        },
+        "a_palettes": [
+            "0x00042622",
+            "0x00042622"
+        ],
+        "sects": 3,
+        "tilemaps": [
+            "0x55BDE",
+            "0x5714C",
+            "0x581AA"
+        ]
+    },
+    "stage 4-3": {
+        "tilemap_b": {
+            "base_offset": "0x0003F1AE",
+            "offset": "0x0003F1C0",
+            "counter": 1
+        },
+        "mapper": {
+            "offset": "0x000FC308"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DD77A",
+            "offset": "0x000DD77E"
+        },
+        "tileset_b": {
+            "base_offset": "0x000CEA06",
+            "offset": "0x000CEA0A"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4B33A"
+        ]
+    },
+    "stage 5-1": {
+        "tilemap_b": {
+            "base_offset": "0x0003F43C",
+            "offset": "0x0003F448",
+            "counter": 0
+        },
+        "mapper": {
+            "offset": "0x000FCC26"
+        },
+        "tileset_a": {
+            "base_offset": "0x000DEAE2",
+            "offset": "0x000DEAE6"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D0E3E",
+            "offset": "0x000D0E42"
+        },
+        "a_palettes": [
+            "0x00042642",
+            "0x00042642",
+            "0x00042642"
+        ],
+        "sects": 4,
+        "tilemaps": [
+            "0x58ED2",
+            "0x59770",
+            "0x59FC8",
+            "0x5A75E"
+        ]
+    },
+    "stage 5-2": {
+        "tilemap_b": {
+            "base_offset": "0x0003F682",
+            "offset": "0x0003F68E",
+            "counter": 0
+        },
+        "mapper": {
+            "offset": "0x000FD086"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E0006",
+            "offset": "0x000E000A"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D1D32",
+            "offset": "0x000D1D36"
+        },
+        "a_palettes": [
+            "0x00042BC2",
+            "0x00042BC2",
+            "0x00042BC2"
+        ],
+        "sects": 4,
+        "tilemaps": [
+            "0x5AE66",
+            "0x5B8C6",
+            "0x5C346",
+            "0x5D3D4"
+        ]
+    },
+    "stage 5-3": {
+        "tilemap_b": {
+            "base_offset": "0x000401CC",
+            "offset": "0x00040202",
+            "counter": 7
+        },
+        "mapper": {
+            "offset": "0x000FDFDE"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E1E5E",
+            "offset": "0x000E1E62"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D6076",
+            "offset": "0x000D607A"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4B440"
+        ]
+    },
+    "stage 6-1": {
+        "tilemap_b": {
+            "base_offset": "0x0003FF2A",
+            "offset": "0x0003FF48",
+            "counter": 3
+        },
+        "mapper": {
+            "offset": "0x000FD68E"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E12CA",
+            "offset": "0x000E12CE"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D25D6",
+            "offset": "0x000D25DA"
+        },
+        "a_palettes": [
+            "0x000425C2"
+        ],
+        "sects": 2,
+        "tilemaps": [
+            "0xAE884",
+            "0xAEB32"
+        ]
+    },
+    "stage 6-2": {
+        "tilemap_b": {
+            "base_offset": "0x000401CC",
+            "offset": "0x00040202",
+            "counter": 7
+        },
+        "mapper": {
+            "offset": "0x000FD9A6"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E1E5E",
+            "offset": "0x000E1E62"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D341A",
+            "offset": "0x000D341E"
+        },
+        "a_palettes": [
+            "0x000424A2",
+            "0x000424A2",
+            "0x000424A2",
+            "0x000424A2",
+            "0x000424A2",
+            "0x000424A2",
+            "0x000424A2"
+        ],
+        "sects": 8,
+        "tilemaps": [
+            "0xAEBA0",
+            "0xAEDD8",
+            "0xAF254",
+            "0xAF792",
+            "0xB072C",
+            "0xB11B8",
+            "0xB15F0",
+            "0xB172C"
+        ]
+    },
+    "stage 6-3": {
+        "tilemap_b": {
+            "base_offset": "0x000406FA",
+            "offset": "0x00040712",
+            "counter": 2
+        },
+        "mapper": {
+            "offset": "0x000FD9A6"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E27F6",
+            "offset": "0x000E27FA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D341A",
+            "offset": "0x000D341E"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4B69A"
+        ]
+    },
+    "stage 7-1": {
+        "tilemap_b": {
+            "base_offset": "0x0004030A",
+            "offset": "0x0004032E",
+            "counter": 4
+        },
+        "mapper": {
+            "offset": "0x000FE44E"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E1FA2",
+            "offset": "0x000E1FA6"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D411E",
+            "offset": "0x000D4122"
+        },
+        "a_palettes": [
+            "0x00042222",
+            "0x00042222",
+            "0x00042222",
+            "0x00042222"
+        ],
+        "sects": 5,
+        "tilemaps": [
+            "0x5E1E6",
+            "0x5EC34",
+            "0x5F254",
+            "0x5FB02",
+            "0x60100"
+        ]
+    },
+    "stage 7-2": {
+        "tilemap_b": {
+            "base_offset": "0x000404FC",
+            "offset": "0x00040562",
+            "counter": 15
+        },
+        "mapper": {
+            "offset": "0x000FEB96"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E27F6",
+            "offset": "0x000E27FA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D5482",
+            "offset": "0x000D5486"
+        },
+        "a_palettes": [
+            "0x00042942",
+            "0x00042942",
+            "0x00042942",
+            "0x00042942"
+        ],
+        "sects": 5,
+        "tilemaps": [
+            "0x60100",
+            "0x61800",
+            "0x62842",
+            "0x63914",
+            "0x6481A"
+        ]
+    },
+    "stage 7-3": {
+        "tilemap_b": {
+            "base_offset": "0x000406FA",
+            "offset": "0x00040712",
+            "counter": 2
+        },
+        "mapper": {
+            "offset": "0x000FEB96"
+        },
+        "tileset_a": {
+            "base_offset": "0x000E27F6",
+            "offset": "0x000E27FA"
+        },
+        "tileset_b": {
+            "base_offset": "0x000D6C7A",
+            "offset": "0x000D6C7E"
+        },
+        "a_palettes": [],
+        "sects": 1,
+        "tilemaps": [
+            "0x4B800"
+        ]
+    }
+}

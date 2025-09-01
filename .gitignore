@@ -1,0 +1,6 @@
+H_stages/
+V_stages/
+*.bin
+__pycache__/
+__pycache__
+*.gsx
