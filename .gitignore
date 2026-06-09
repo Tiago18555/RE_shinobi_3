@@ -11,3 +11,6 @@ venv/
 
 stages
 stages.old
+/scratch
+
+*.old

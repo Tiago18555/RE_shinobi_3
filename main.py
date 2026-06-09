@@ -9,6 +9,7 @@ from nametable_builder import NametableBuilder
 from scene_builder import SceneBuilder
 from image_exporter import ImageExporter
 from bg_strategies import BackgroundStrategy
+from collision_strategies import CollisionStrategies
 
 def main(output_root, args):
     # Base dir is now local (class_version)
@@ -46,12 +47,16 @@ def main(output_root, args):
         img_plane_b_1 = os.path.join(stage_folder, f"[{stage_name}] plane_b_1.png")
         img_plane_b_2 = os.path.join(stage_folder, f"[{stage_name}] plane_b_2.png")
         img_plane_b_3 = os.path.join(stage_folder, f"[{stage_name}] plane_b_3.png")
+        img_v_collision = os.path.join(stage_folder, f"[{stage_name}] v_collision.png")
+        img_h_collision = os.path.join(stage_folder, f"[{stage_name}] h_collision.png")
 
         # --------------- Infos -----------------------
         decompress_offset_a = int(info["tileset_a"]["offset"], 16)
         decompress_offset_b = int(info["tileset_b"]["offset"], 16)
 
         ba_mapper = int(info["mapper"]["offset"], 16)
+        collision_offset = int(info["collision"]["offset"], 16)
+        collision_mapper = rom[collision_offset:collision_offset + 256]
         bg_x = int(info["tilemap_b"]["x_size"], 16)
         bg_y = int(info["tilemap_b"]["y_size"], 16)
 
@@ -151,13 +156,17 @@ def main(output_root, args):
         parsed_palette_a = ImageExporter.parse_raw_palette(color_palette_a)
 
         if v_plane_a is not None:
-            ImageExporter.export_plane_to_png(v_plane_a, parsed_palette_a, 64, (len(tilemap_a) // 32) * 2, img_v_plane_a, 4)
+            ImageExporter.export_plane_to_png(v_plane_a, parsed_palette_a, 64, (len(tilemap_a) // 32) * 2, img_v_plane_a, 2)
+            if not CollisionStrategies.export(stage_name, img_v_collision, scale=1):
+                ImageExporter.export_collision_to_png(tilemap_a, collision_mapper, vertical=True, output_path=img_v_collision, scale=1)
             if args.debug:
                 with open(colored_v_plane_a, "wb") as f:
                     f.write(color_palette_a + v_plane_a)
 
         if h_plane_a is not None:
-            ImageExporter.export_plane_to_png(h_plane_a, parsed_palette_a, (len(tilemap_a) // 32) * 2, 64, img_h_plane_a, 4)
+            ImageExporter.export_plane_to_png(h_plane_a, parsed_palette_a, (len(tilemap_a) // 32) * 2, 64, img_h_plane_a, 2)
+            if not CollisionStrategies.export(stage_name, img_h_collision, scale=1):
+                ImageExporter.export_collision_to_png(tilemap_a, collision_mapper, vertical=False, output_path=img_h_collision, scale=1)
             if args.debug:
                 with open(colored_h_plane_a, "wb") as f:
                     f.write(color_palette_a + h_plane_a)
@@ -167,8 +176,8 @@ def main(output_root, args):
         parsed_palette_b = ImageExporter.parse_raw_palette(color_palette_b)
 
         if stage_name == "stage 2-2":
-            ImageExporter.export_plane_to_png(v_plane_b, parsed_palette_b, 0x14 * 2, 0x1F, img_v_plane_b, 4)
-            ImageExporter.export_plane_to_png(h_plane_b, parsed_palette_b, 0x20 * 2, 0x1F, img_h_plane_b, 4)
+            ImageExporter.export_plane_to_png(v_plane_b, parsed_palette_b, 0x14 * 2, 0x1F, img_v_plane_b, 2)
+            ImageExporter.export_plane_to_png(h_plane_b, parsed_palette_b, 0x20 * 2, 0x1F, img_h_plane_b, 2)
 
             if args.debug:
                 with open(colored_h_plane_b, "wb") as f:
@@ -177,11 +186,11 @@ def main(output_root, args):
                     f.write(color_palette_b + v_plane_b)
 
         elif stage_name == "stage 7-1":
-            ImageExporter.export_plane_to_png(plane_b_1, parsed_palette_b, 0x10 * 2, 0x11, img_plane_b_1, 4)
-            ImageExporter.export_plane_to_png(plane_b_2, parsed_palette_b, 0x10 * 2, 0xB, img_plane_b_2, 4)
-            ImageExporter.export_plane_to_png(plane_b_3, parsed_palette_b, 0x10 * 2, 0x11, img_plane_b_3, 4)
+            ImageExporter.export_plane_to_png(plane_b_1, parsed_palette_b, 0x10 * 2, 0x11, img_plane_b_1, 2)
+            ImageExporter.export_plane_to_png(plane_b_2, parsed_palette_b, 0x10 * 2, 0xB, img_plane_b_2, 2)
+            ImageExporter.export_plane_to_png(plane_b_3, parsed_palette_b, 0x10 * 2, 0x11, img_plane_b_3, 2)
         else:
-            ImageExporter.export_plane_to_png(plane_b, parsed_palette_b, (bg_x + 1) * 2, bg_y, img_plane_b, 4)
+            ImageExporter.export_plane_to_png(plane_b, parsed_palette_b, (bg_x + 1) * 2, bg_y, img_plane_b, 2)
             
             if args.debug:
                 with open(colored_plane_b, "wb") as f:

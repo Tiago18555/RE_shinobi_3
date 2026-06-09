@@ -12,6 +12,9 @@
         "mapper": {
             "offset": "0x000FA892"
         },
+        "collision": {
+            "offset": "0x000FAB6A"
+        },
         "tileset_a": {
             "base_offset": "0x000D8E32",
             "offset": "0x000D8E36"
@@ -48,6 +51,9 @@
         },
         "mapper": {
             "offset": "0x000FAC72"
+        },
+        "collision": {
+            "offset": "0x000FB08A"
         },
         "tileset_a": {
             "base_offset": "0x000D97C6",
@@ -86,6 +92,9 @@
         "mapper": {
             "offset": "0x000FAC72"
         },
+        "collision": {
+            "offset": "0x000FB08A"
+        },
         "tileset_a": {
             "base_offset": "0x000D97C6",
             "offset": "0x000D97CA"
@@ -119,6 +128,9 @@
         "mapper": {
             "offset": "0x000FB192"
         },
+        "collision": {
+            "offset": "0x000FB1A2"
+        },
         "tileset_a": {
             "base_offset": "0x000DA9DA",
             "offset": "0x000DA9DE"
@@ -151,6 +163,9 @@
         },
         "mapper": {
             "offset": "0x000FB1B8"
+        },
+        "collision": {
+            "offset": "0x000FB9B0"
         },
         "tileset_a": {
             "base_offset": "0x000DB6EE",
@@ -190,6 +205,9 @@
         "mapper": {
             "offset": "0x000FB1B8"
         },
+        "collision": {
+            "offset": "0x000FB9B0"
+        },
         "tileset_a": {
             "base_offset": "0x000DB6EE",
             "offset": "0x000DB6F2"
@@ -222,6 +240,9 @@
         },
         "mapper": {
             "offset": "0x000FBAB8"
+        },
+        "collision": {
+            "offset": "0x000FBEA8"
         },
         "tileset_a": {
             "base_offset": "0x000DBAA2",
@@ -260,6 +281,9 @@
         "mapper": {
             "offset": "0x000FBFB0"
         },
+        "collision": {
+            "offset": "0x000FC200"
+        },
         "tileset_a": {
             "base_offset": "0x000DC6E6",
             "offset": "0x000DC6EA"
@@ -292,6 +316,9 @@
         },
         "mapper": {
             "offset": "0x000FBFB0"
+        },
+        "collision": {
+            "offset": "0x000FC200"
         },
         "tileset_a": {
             "base_offset": "0x000DC6E6",
@@ -326,6 +353,9 @@
         "mapper": {
             "offset": "0x000FC308"
         },
+        "collision": {
+            "offset": "0x000FC318"
+        },
         "tileset_a": {
             "base_offset": "0x000DD77A",
             "offset": "0x000DD77E"
@@ -358,6 +388,9 @@
         },
         "mapper": {
             "offset": "0x000FC32E"
+        },
+        "collision": {
+            "offset": "0x000FCB1E"
         },
         "tileset_a": {
             "base_offset": "0x000DE1CE",
@@ -396,6 +429,9 @@
         "mapper": {
             "offset": "0x000FC308"
         },
+        "collision": {
+            "offset": "0x000FC318"
+        },
         "tileset_a": {
             "base_offset": "0x000DD77A",
             "offset": "0x000DD77E"
@@ -428,6 +464,9 @@
         },
         "mapper": {
             "offset": "0x000FCC26"
+        },
+        "collision": {
+            "offset": "0x000FCF7E"
         },
         "tileset_a": {
             "base_offset": "0x000DEAE2",
@@ -468,6 +507,9 @@
         "mapper": {
             "offset": "0x000FD086"
         },
+        "collision": {
+            "offset": "0x000FD586"
+        },
         "tileset_a": {
             "base_offset": "0x000E0006",
             "offset": "0x000E000A"
@@ -507,6 +549,9 @@
         "mapper": {
             "offset": "0x000FDFDE"
         },
+        "collision": {
+            "offset": "0x000FE346"
+        },
         "tileset_a": {
             "base_offset": "0x000E1E5E",
             "offset": "0x000E1E62"
@@ -539,6 +584,9 @@
         },
         "mapper": {
             "offset": "0x000FD68E"
+        },
+        "collision": {
+            "offset": "0x000FD89E"
         },
         "tileset_a": {
             "base_offset": "0x000E12CA",
@@ -575,6 +623,9 @@
         },
         "mapper": {
             "offset": "0x000FD9A6"
+        },
+        "collision": {
+            "offset": "0x000FDED6"
         },
         "tileset_a": {
             "base_offset": "0x000E1E5E",
@@ -623,6 +674,9 @@
         "mapper": {
             "offset": "0x000FD9A6"
         },
+        "collision": {
+            "offset": "0x000FDED6"
+        },
         "tileset_a": {
             "base_offset": "0x000E27F6",
             "offset": "0x000E27FA"
@@ -655,6 +709,9 @@
         },
         "mapper": {
             "offset": "0x000FE44E"
+        },
+        "collision": {
+            "offset": "0x000FEA8E"
         },
         "tileset_a": {
             "base_offset": "0x000E1FA2",
@@ -698,6 +755,9 @@
         "mapper": {
             "offset": "0x000FEB96"
         },
+        "collision": {
+            "offset": "0x000FF136"
+        },
         "tileset_a": {
             "base_offset": "0x000E27F6",
             "offset": "0x000E27FA"
@@ -739,6 +799,9 @@
         },
         "mapper": {
             "offset": "0x000FEB96"
+        },
+        "collision": {
+            "offset": "0x000FF136"
         },
         "tileset_a": {
             "base_offset": "0x000E27F6",

@@ -18,7 +18,7 @@ def get_addrs(input_file, offset):
             
     return addrs
 
-def get_mapper(input_file, offset):
+def get_drawing_mapper(input_file, offset):
     base_addrs = []
     addrs = []
     with open(input_file, "rb") as f:
@@ -37,6 +37,29 @@ def get_mapper(input_file, offset):
             
         for addr in base_addrs:
             f.seek(addr)
+            addrs.append(int.from_bytes(f.read(4)))
+            
+    return addrs
+
+def get_collision_mapper(input_file, offset):
+    base_addrs = []
+    addrs = []
+    with open(input_file, "rb") as f:
+        f.seek(offset)
+        for _ in range(7):
+            a = int.from_bytes(f.read(4))
+            base_addrs.append(a)
+            
+            b = int.from_bytes(f.read(4))
+            base_addrs.append(b)
+            
+            c = int.from_bytes(f.read(4))
+            base_addrs.append(c)
+
+            _ = int.from_bytes(f.read(4))
+            
+        for addr in base_addrs:
+            f.seek(addr + 4)
             addrs.append(int.from_bytes(f.read(4)))
             
     return addrs
@@ -68,7 +91,8 @@ def create_json(input_file="rom.bin"):
     
     stage_names = [f"stage {i}-{j}" for i in range(1, 8) for j in range(1, 4)]
     
-    mapper = get_mapper(input_file, 0xFF23E)
+    mapper = get_drawing_mapper(input_file, 0xFF23E)
+    collision = get_collision_mapper(input_file, 0xFF23E)
     tilemap_b_addrs = get_addrs(input_file, 0x3E1C8)
     tileset_a_addrs = get_addrs(input_file, 0xE2ED8)
     tileset_b_addrs = get_addrs(input_file, 0xD8DB2)
@@ -79,7 +103,7 @@ def create_json(input_file="rom.bin"):
     stages = {}
     sect_counts = [3, 3, 1, 1, 3, 1, 3, 1, 1, 1, 3, 1, 4, 4, 1, 2, 8, 1, 5, 5, 1]
     
-    for name, tm_b, ts_a, ts_b, mapper, sects in zip(stage_names, tilemap_b_addrs, tileset_a_addrs, tileset_b_addrs, mapper, sect_counts):
+    for name, tm_b, ts_a, ts_b, mapper, collision, sects in zip(stage_names, tilemap_b_addrs, tileset_a_addrs, tileset_b_addrs, mapper, collision, sect_counts):
         counter = data[tm_b + 5]
         tm_b_decomp = tm_b + 6 + ((counter + 1) * 6)
         vram_base_offset = int.from_bytes(data[ts_a: ts_a + 2], 'big') * 32
@@ -121,6 +145,9 @@ def create_json(input_file="rom.bin"):
             },
             "mapper": { 
                 "offset": f"0x{mapper:08X}"
+            },
+            "collision": {
+                "offset": f"0x{collision:08X}"
             },
             "tileset_a": {
                 "base_offset": f"0x{ts_a:08X}",

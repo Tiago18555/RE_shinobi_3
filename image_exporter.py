@@ -61,3 +61,75 @@ class ImageExporter:
         
         output.save(output_path, "PNG")
         return output
+
+    @classmethod
+    def export_collision_to_png(cls, tilemap: bytes, collision_mapper: bytes, vertical: bool, output_path: str, scale: int = 1):
+        from PIL import ImageDraw, ImageFont
+        
+        quads_x = len(tilemap) // 32
+        
+        if vertical:
+            width_quads = 32
+            height_quads = quads_x
+        else:
+            width_quads = quads_x
+            height_quads = 32
+            
+        block_size = 16 * scale
+        img_w = width_quads * block_size
+        img_h = height_quads * block_size
+        
+        img = Image.new('RGB', (img_w, img_h), "#1a1a1e")
+        draw = ImageDraw.Draw(img)
+        font = ImageFont.load_default(size=max(8, 8 * scale))
+
+        # Colors indexed by lower nibble (applied when lower nibble NOT in {8,9,A,B,E})
+        nibble_colors = {
+            0x0: ("#1a1a1e", "#2e2e36", "#aaaaaa"),  # 0x00 — background/void
+            0x1: ("#b0b0bc", "#8a8a96", "#111111"),  # 0x01 — solid
+            0x2: ("#ff7675", "#cc5a59", "#ffffff"),  # 0x02 — red
+            0x3: ("#fd79a8", "#c0547f", "#ffffff"),  # 0x03 — pink
+            0x4: ("#55efc4", "#2db58e", "#000000"),  # 0x04 — teal
+            0x5: ("#00b894", "#007f65", "#ffffff"),  # 0x05 — green
+            0x6: ("#fdcb6e", "#c9962a", "#000000"),  # 0x06 — yellow
+            0x7: ("#e17055", "#a84a2f", "#ffffff"),  # 0x07 — orange
+            0xC: ("#74b9ff", "#3a8fd1", "#000000"),  # 0x0C — light blue
+            0xD: ("#a29bfe", "#6c5ce7", "#ffffff"),  # 0x0D — purple
+            0xF: ("#0984e3", "#0660a8", "#ffffff"),  # 0x0F — blue
+        }
+        # Lower nibbles that receive no special coloring
+        uncolored_nibbles = {0x8, 0x9, 0xA, 0xB, 0xE}
+
+        for quad_y in range(height_quads):
+            for quad_x in range(width_quads):
+                if vertical:
+                    tilemap_idx = quad_x + quad_y * 32
+                else:
+                    tilemap_idx = quad_y + quad_x * 32
+
+                if tilemap_idx >= len(tilemap):
+                    continue
+
+                q_idx = tilemap[tilemap_idx]
+                coll_val = collision_mapper[q_idx] if q_idx < len(collision_mapper) else 0
+
+                x1 = quad_x * block_size
+                y1 = quad_y * block_size
+                x2 = x1 + block_size
+                y2 = y1 + block_size
+
+                lower = coll_val & 0xF
+                label = f"{coll_val:02X}"
+
+                if lower in uncolored_nibbles:
+                    draw.rectangle([x1, y1, x2 - 1, y2 - 1], fill="#1a1a1e", outline="#2e2e36")
+                else:
+                    fill, outline, text_color = nibble_colors[lower]
+                    draw.rectangle([x1, y1, x2 - 1, y2 - 1], fill=fill, outline=outline)
+                    if block_size >= 8:
+                        center_x = x1 + block_size // 2
+                        center_y = y1 + block_size // 2
+                        draw.text((center_x, center_y), label, fill=text_color, anchor="mm", font=font)
+
+        img.save(output_path, "PNG")
+        return img
